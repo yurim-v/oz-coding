@@ -1,0 +1,29 @@
+<!--2024.03.26-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>양식 만들고 입력 정보 보내기</title>
+  </head>
+  <body>
+    <form action="none.com" method="post"> <!--입력 요소를 모아주는 역할 / 내부에 입력받고 싶은 항목들을 추가 -->
+      <!--받은 입력 값을 어디로 어떻게 보낼지 설정해줌-->
+      <label for="name">이름</label>
+      <input id="name" type="text" name="name">
+      <br/>
+      <label for="age">나이</label>
+      <input id="age" type="number" name="age"> 
+      <br>
+      <!-- id : 웹 페이지 내에서의 식별자
+       name : 서버에서 입력 값을 구분하는 식별자-->
+      <label for="character">성격</label>
+      <textarea cols="40" rows="3" id="character" name="character"></textarea>
+      <br/>
+
+      <input type="submit">
+      <!--submit : 입력 받은 값들을 서버로 보낼 수 있음-->
+
+    </form>
+    <!--form으로 입력 값을 묶었음 / 블록레벨 요소-->
+  </body>
+</html>

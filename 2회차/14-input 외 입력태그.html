@@ -1,0 +1,51 @@
+<!--2024.03.25-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <title>input 외 입력 태그</title>
+  </head>
+  <body>
+    <h1>음료를 고르세요.</h1>
+    <select> 
+      <option value="coffee">커피</option>
+      <option value="coke" selected>콜라</option>
+      <option value="fanta">환타</option>
+      <option value="water">생수</option>
+    </select>
+    <!-- 추후 옵션에 따른 처리들을 코드로 연결해 줄 수 있다.
+      같은 옵션 태그를 그대로 두면, 추후 처리가 어렵다.
+      반드시, value 속성으로 구별해준다.-->
+      <!-- selected 속성 : 해당 옵션을 우선으로 노출시킨다.-->
+    <hr/>
+    <!--fieldset : 영역을 묶어서 강조
+      legend : 묶은 영역의 이름 지정-->
+    <fieldset>
+      <legend>음료 선택</legend>
+      <h1>음료를 고르세요.</h1>
+      <select multiple size="2"> 
+        <!--multiple : ctrl 누르고 다중 선택 가능
+          size : multiple로 드롭다운이 아니라, 펼쳐진 메뉴를 몇개만 노출시킬지 정할 수 있다.-->
+        <option value="coffee">커피</option>
+        <option value="coke" selected>콜라</option>
+        <option value="fanta">환타</option>
+        <option value="water">생수</option>
+      </select>
+
+      <hr/>
+      <h1>기타 음료를 원한다면 적어주세요.</h1>
+      <textarea cols="30" rows="10"></textarea>
+      <!--textarea 가 오른쪽 하단 빗금을 클릭 시, 마우스에 의해 사이즈 조절 가능 => 리사이징  -->
+    </fieldset>
+    <hr/>
+    <h2>우리의 준비 상태는 아래와 같습니다.</h2>
+    <progress max="100" value="80"></progress>
+
+    <hr/>
+    <h1>추가 용무가 있으면 호출해주세요.</h1>
+    <button>호출</button> <!--클릭도 입력이라는 것을 기억하자 !-->
+    <input type="button" value="호출"> <!--input은 단일태그라, value로 호출 이름을 지정하자 !-->
+    <hr/>
+
+  </body>
+</html>

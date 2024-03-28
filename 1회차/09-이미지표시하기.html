@@ -1,0 +1,33 @@
+<!--2024.03.23-->
+
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <title>이미지 표시하기</title>
+  </head>
+  <body>
+    <img src="study_purin.jpg"/>
+      <!--같은 폴더 내에 사진이 위치한 경우에는 이미지 이름을 넣어주면된다.-->
+    <hr>
+    <img src="09-images/sub-folder-purin.jpg"/>
+      <!--하위 폴더에 사진이 있는 경우,
+        이미지 이름 앞에 위치 표시
+        ㅇㅇ/ㅁㅁ : ㅇㅇ 폴더에 있는 ㅁㅁ 이미지 라는 뜻-->
+    <hr>
+    <img src="../upfolder-purin.jpg"/>
+        <!-- .. : 1 단계 상위 폴더에 있는 사진 위치 지정-->
+  
+    <hr>
+    <img
+     src="09-imagessub-folder-purin.jpg"
+     alt="공부하는 폼폼푸린"/>
+     <!--이미지 주소를 틀리게한 후 대체 텍스트 지정
+      이미지 주소를 맞게 입력하여, 이미지가 나타나도
+      alt를 통해 대체 택스트를 지정해주면
+      장애인 및 고령자의 웹 접근성을 향상시킬 수 있어 지정해주는 것이 좋다-->
+    <br>
+    <img src="study_purin.jpg"
+      width="300" height="200" />
+  </body>
+</html>

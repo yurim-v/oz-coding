@@ -1,0 +1,23 @@
+<!--2024.03.25-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>링크 표시하기</title>
+  </head>
+  <body>
+    <a>네이버로 가볼게요 !</a> <!--href 없으면 그냥 인라인 텍스트랑 비슷-->
+    <a href="http://www.naver.com">네이버로 가볼게요 ! </a> <!--http:// 안쓰면 에러남-->
+    <hr/>
+    <a href="http://www.naver.com" target="_self">target_self 네이버</a> <!--target 지정 안한 것과 같음-->
+    <br/>
+    <a href="http://www.naver.com" target="_blank">target_blank 네이버</a>
+    <hr/>
+
+    <!--a태그를 통해 웹사이트가 아니라, 내가 만든 html 문서로도 이동이 가능함
+      웹사이트 주소가 아니라, 문서의 경로(위치)를 입력하면 된다 !-->
+    <a target="_blank" href="../1회차/profile.html">
+      내가 만든 프로필 페이지로 이동할게요 !
+    </a>
+  </body>
+</html>
