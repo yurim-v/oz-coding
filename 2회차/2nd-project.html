@@ -1,0 +1,79 @@
+<!--2024.03.26-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <meta name="author" content="KYR">
+    <meta name="decription" content="설문조사 페이지 프로젝트">
+  </head>
+  <body>
+    <header>
+      <h1>설문조사 양식</h1>
+      <p> 모든 항목에 빠짐없이 체크해주십시오.</p>
+    </header>
+    <hr/>
+
+    <!--박스 1-->
+    <main>
+      <form>
+        <!--가능하면 모든 입력 요소에 네임 지정-->
+        <fieldset>
+          <legend> 개인정보 </legend>
+          <label>
+            이름
+            <input type="text" placeholder="본명을 입력하세요." name="name">
+          </label>
+          <br/>
+          <label for="email">이메일주소</label>
+          <input type="email" id="email" placeholder="메일 주소 쓰세요." name="email">
+        </fieldset>
+        
+        <!--박스 2 -->
+        <fieldset>
+          <legend>설문</legend>
+          <p>연령대가 어떻게 되십니까?</p>
+          <!--선택 박스가 동그라미 > 
+            radio : 중복선택 불가 / 입력요소를 구분하지 않으면, 중복 선택이됨
+            식별자를 동일하게 지정해줘야 하나의 질문으로 묶여서 단일 선택이 가능하게됨-->
+          <label> <input type="radio" name="age">10대</label>
+          <label> <input type="radio" name="age">20대</label>
+          <label> <input type="radio" name="age">30대</label>
+          <label> <input type="radio" name="age">40대</label>
+          <label> <input type="radio" name="age">50대</label>
+          <label> <input type="radio" name="age">그 외</label>
+
+
+          <p>학원을 선택할 때, 가장 중요하게 생각하는 것은 무엇입니까? 모두 고르시오.</p>
+          <!--checkbox : 중복선택 가능 / form이기에 name지정하여 입력값 구분해주자-->
+          <label> <input type="checkbox" name="academy">위치</label>
+          <label> <input type="checkbox" name="academy">학원비</label>
+          <label> <input type="checkbox" name="academy">강사</label>
+          <label> <input type="checkbox" name="academy">시설</label>
+        </fieldset>
+
+        <!--박스 3-->
+        <fieldset>
+          <legend>기타 의견</legend>
+          <textarea cols="30" rows="5" name="comment"></textarea>
+        </fieldset>
+        <input type="submit">
+      </form>
+    </main>
+
+    <hr/>
+
+    <footer>
+      <p>입력하느라 수고하셨습니다.</p>
+    </footer>
+  </body>
+</html>
+</html>
+
+<!--
+  1.시맨틱 태그로 큰 구조를 구분
+  2.main > form 사용 > 추후 서버 연결 시, action / method 속성 추가
+  3. form > fieldset으로 작은 구조 구분
+  4. radio 중복선택 x / checkbox 중복선택 o /// name을 동일하게 지정해야 같은 질문에 귀속된 입력으로 인식함
+-->

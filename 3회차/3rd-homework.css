@@ -1,0 +1,45 @@
+*{
+  text-align:center;
+}
+
+html{
+  background-color:rgba(153, 205, 50, 0.233);
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:16px;
+}
+
+#aesook-name{
+  width:200px;
+  margin:auto;
+  background-color:rgba(0, 128, 0, 0.274);
+  background-clip:padding-box;
+  border-radius:20px;
+
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size:3rem;
+}
+
+img{
+  border-radius:150px;
+}
+
+h3{
+  font-weight : 900;
+  font-size:30px;
+  background-color:rgba(0, 128, 0, 0.274);
+  margin:auto;
+  width:250px;
+  border-radius:30px;
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+}
+
+#ae{
+  font-weight:900;
+  font-size:1.5rem;
+}
+
