@@ -1,0 +1,43 @@
+<!--2024.03.28-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+
+    <title>색깔을 지정하는 다양한 방법</title>
+
+    <style>
+      p#one{
+        /*rgb함수*/
+        color : rgb(100%, 50%, 60%);
+      }
+      p#two{
+        color:rgba(100%, 50%, 60%, 0.5);
+        /* color의 rgba로 투명도를 지정하지 않아도
+          opacity : 값 ; 으로 투명도 지정 가능 */
+      }
+
+      p#three{
+        color:hsla(300, 50%, 50%, 0.3);
+      }
+
+      p#four{
+        color: #FF00FF50 ; /* 6자리 > RGB / 8자리 > RGB + 투명도 */
+      }
+      /*
+        0 ~ 9 + A ~ F => 16개 / A = 11, B = 12 ... 
+        16진수 > 00 ~ FF > 십진법으로 0 ~ 255
+      */
+
+      /* color뿐아니라, background-color 또는 border-color 에도 함수 및 16진수값 사용 가능 */
+
+    </style>
+  </head>
+  <body>
+    <p id="one">고소한 아몬드와 함께 여는 아침</p>
+    <p id="two">고소한 아몬드와 함께 여는 아침</p>
+    <p id="three">고소한 아몬드와 함께 여는 아침</p>
+    <p id="four">고소한 아몬드와 함께 여는 아침</p>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!--2024.03.27-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>박스 모델</title>
+
+    <style>
+
+      /*콘텐츠 영역 크기 변화*/
+      /* % : 내가 속한 영역을 기준으로 백분율 계산 
+        => width : 기준값 - body 요소 > 화면의 가로 크기 / height : body 영역의 높이 but 기준값이 없다.
+         ㄴ height는 %를 지정해도 body 영역의 요소들에는 적용이 안된다. */
+      .area{
+
+        /**원래 713.6 > 50%로 변경 시, 356.8px */
+        width:50%;
+        height:100px;
+        
+      }
+    </style>
+  </head>
+  <body>
+     <h2>현진영 - 흐린 기억속의 그대</h2>
+    <p>안개빛 조명은 흐트러진 내 몸을 감싸고</p>
+    <p class="area">술에 취해 비틀거리는 나의 모습 이제는 싫어</p>
+
+  </body>
+</html>

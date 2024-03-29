@@ -1,0 +1,45 @@
+<!--2024.03.27-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+
+    <title>CSS 문서 사용하기</title>
+
+    <style>
+      p{
+        color:orange;
+      } 
+    </style>
+
+    <link href="19-CSS문서-사용하기.css" rel="stylesheet" >
+
+    <!--style은 대게 head에 기재한다.
+      인라인 스타일이 아닌 경우(내부,외부 스타일시트) , 나중에 쓰여진 선언문에 적용된다.-->
+
+  </head>
+  <body>
+    <p style="color:red;">스타일 적용 실험; 색깔만 바꿔보자</p>
+    
+    <!--색상말고 다른 스타일 속성을 적용하자 -->
+    <p style="color:red; opacity:0;">스타일 적용 실험; 색깔만 바꿔보자</p>
+    <!--CSS관점에서 =은 : / 닫기는 ; 
+      여러 속성을 style로 추가할 때에는 띄어쓰기하고 "" 안에 ;로 구분해서 적어주면 된다
+      opacity : 투명도-->
+    <hr/>
+
+    <!--내부 스타일 시트로 style 태그 활용하기
+      style : HTML 태그이나, 안에 들어가는 content가 CSS로 적용된다.-->
+
+      <!-- 이 위치에 <style>이 있어도되지만, 보통 head에 있는다-->
+    <p style="color:red;">스타일 적용 실험; 색깔만 바꿔보자</p>
+    <p>스타일 적용 실험; 색깔만 바꿔보자</p>
+    <p>스타일 적용 실험; 색깔만 바꿔보자</p>
+    <!-- style 태그 아래에 오는 p태그들 색상을 다 바꾼다.
+      다만, CSS스타일 선언문에는 "인라인 스타일은 우선적으로 적용된다"는 특징이 있다.
+      ㄴ그래서 red로 지정한 문구는 오렌지가 아니라 빨간색이다.-->
+
+  
+  </body>
+</html>

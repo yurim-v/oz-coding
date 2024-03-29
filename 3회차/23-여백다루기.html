@@ -1,0 +1,38 @@
+<!--2024.03.27-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>여백 다루기</title>
+
+    <style>
+      div{
+        width:200px;
+        height:200px;
+        border: 1px solid black;
+        /*  margin을 지정하지 않으면, div는 블록레벨 요소이기때문에,
+         지정한 콘텐츠 영역 외의 블록 부분은 바깥여백으로 인식된다. */
+
+         margin:10px 20px 30px 40px;
+
+         /* margin, padding으로 한쪽 면만 여백을 주고싶은 경우에는 접미사 사용하자.
+         top, left, right, bottom으로 구분*/
+
+        padding-top:30px;
+
+        /* content-box로 사이징이 되어있는 경우 내가 콘텐츠를 200*200으로 지정해도 여백 설정 시,
+        전체 요소의 크기가 [ 200+ 안쪽 여백+테두리 ]로 200보다 더 커진다. */
+
+        box-sizing: border-box;
+        /* 콘텐츠박스 + 안쪽여백 + 테두리 = 200*200으로 맞춰진다 */
+      }
+  
+
+    </style>
+
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

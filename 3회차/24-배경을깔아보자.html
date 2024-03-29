@@ -1,0 +1,33 @@
+<!--2024.03.27-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>배경을 깔아보자</title>
+
+    <style>
+      div{
+        width:300px;
+        height:300px;
+        padding :20px;
+        border:20px double green;
+
+       /*  background-color: yellowgreen;  */
+        background-clip:  padding-box;
+        background-image: url(images/aesook.jpg); /* HTML src가 CSS url*/
+        background-size:340px 340px; /* 이미지 사이즈 조정 */
+         /* 영역보다 사이즈를 작게 설정할 경우 바둑판 효과가 나타남
+          바둑판 효과를 방지하려면 background-repeat 사용 */ 
+        background-repeat : no-repeat; 
+
+        background-origin: content-box;
+
+        background-position : top
+      } 
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

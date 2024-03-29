@@ -1,0 +1,47 @@
+<!--2024.03.28-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>텍스트 꾸미기</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Hi+Melody&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <style>
+
+      
+      /* Web 폰트 > 예시로 구글에서 만든 폰트를 가져다가 써보자.
+        구글폰트 검색 > 폰트 결정 후 > get font >get Embed code > link 내용 복사 후 head 부분에 입력
+         > CSS부분에서 확인되는 font-family의 글자 이름 그대로 긁어다가 입력  */
+
+      *{
+        font-family: "Bagel Fat One", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body{
+        font-size:32px;
+      }
+      #first{
+        font-size: 2em; 
+        /*
+          상위(부모)태그 크기의 2배인 16px 크기로 지정된다.
+        */ 
+
+        font-weight:300;
+        line-height:50px; /* 텍스트 간의 줄 간격을 더 커지게함 > 폰트사이즈, 글꼴에 따라 바뀌는 정도가 다름 */
+      
+        text-align: justify;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p id="first">에스프레소와 물을 섞으면 아메리카노가 됩니다.</p>
+    <p>에스프레소와 물을 섞으면 아메리카노가 됩니다.</p>
+  </body>
+</html>

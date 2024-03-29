@@ -1,0 +1,65 @@
+<!--2024.03.27-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>선택자 기본편</title>
+
+    <!-- 실습의 편리함을 위해 내부 스타일시트만 활용-->
+    <style>
+      /*전체 선택자*/
+      *{
+        color:red;
+      }
+
+      /*태그 선택자*/
+      li{
+        color:blue;
+      }
+
+      #pop{
+        color:green;
+      }
+
+      /*class 선택자*/
+      /*.hip도 가능하나, 어떤 태그의 class인지 확인하기 쉽게 li.hip도 가능하다
+         ㄴ <li>의 class="hip"의 스타일을 지정한다는 의미(조건 2개 성립해야함) 
+          // .hip : class 식별자가 hip인 요소 모두 선택*/
+      .hip{
+        color:purple;
+      }
+
+      /*id 선택자*/
+      /* #belly도 가능하나, 어떤 태그의 id인지 확인하기 쉽게 li#belly도 가능하다
+         ㄴ <li>의 id="belly"의 스타일을 지정한다는 의미(조건 2개 성립해야함) 
+          // #belly : id 식별자가 belly인 요소 모두 선택*/
+      #belly{
+        color:orange;
+      }
+
+      /*선택자 간에는 우선 순의가 있음 : 쓰여진 순서랑 관계없이 적용되는 순위가 있음
+       1. id 선택자
+       2. class 선택자
+       3. 태그 선택자
+       4. 그룹 선택자 */
+
+
+       /*그룹 선택자*/
+       h2, p, li{
+        color:yellow;
+       }
+    </style>
+  </head>
+  <body>
+    <h2>춤의 장르</h2>
+    <p>무척 다양한 장르가 존재합니다.</p>
+    <ul>
+      <li class="hip">비보잉</li>
+      <li class="hip" id="pop">팝핀</li>
+      <li class="hip">왁킹</li>
+      <li id="belly">벨리</li>
+      <li id="jazz">재즈</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!--2024.03.27-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>박스 모델</title>
+
+    <style>
+
+      .area{
+        width:200px;
+        height:100px;
+      }
+
+      .red{
+        border-width:3px;
+        border-style:dashed; /*border-style에는 여러개의 속성값이 있음*/
+        /*border 기본 색상은 검정*/
+        border-color:red;
+      }
+
+      /* 위 세가지 속성을 한번에 나타내는 단축속성 border / 각 속성간의 구분은 공백으로 ! */
+      .green{
+        border: 5px solid green;
+          /*area의 영역 크기를 지정해줬기때문에, border의 두께도 해당 크기를 기반으로 표현된다! */
+        
+        border-radius:10px 20px 30px 40px;
+        /*4개 모서리를 한번에 지정도 가능하고, 각각 따로 지정도 가능하다.
+         공백으로 구분하되, 적용은 좌측 상단부터 시계방향으로 적용됨*/
+      }
+    
+
+    </style>
+  </head>
+  <body>
+     <h2>현진영 - 흐린 기억속의 그대</h2>
+    <p class="red">안개빛 조명은 흐트러진 내 몸을 감싸고</p>
+    <p class="area green">술에 취해 비틀거리는 나의 모습 이제는 싫어</p>
+
+  </body>
+</html>
