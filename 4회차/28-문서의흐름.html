@@ -1,0 +1,55 @@
+<!--2024.04.01-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>문서의 흐름</title>
+
+    <style>
+
+      .container{
+        height:400px;
+        border : 3px solid green;
+      }
+
+      #first{
+        float:left;
+      } 
+      
+      #second{
+        float:right;
+      } 
+
+      /*먼저 작성한 이미지 2개가 float으로 문서의 흐름을 벗어남
+         > p 태그의 문단이 마치 첫번째 요소인 것 처럼 앞에 배치됨
+         > 문서의 흐름에서 제외됐지만 공간은 이미지 2개가 차지함
+         > p태그 문단이 이미지를 제외한 공간에 낑겨들어감
+         > float 으로 인해 p태그의 공간에 균열이 생긴다 > 역효과가 될 수 있음*/
+
+      p{
+      clear:both;
+      }
+      /*역효과를 보는 요소에 clear 지정
+       letf : 왼쪽에 있는 float 무시
+       right : 오른쪽에 있는 float 무시
+       both : 양쪽 float 무시 */
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+
+      <img id="first" src="../1회차/images/aesook.jpg"  width="200px">
+      <img id="second" src="../1회차/images/upfolder-purin.jpg" width="200px" >
+
+      <p>
+        애숙이는 대한민국의 강아지이며, 지금은 무지개 나라에서 살고있다.
+        원래 이름은 '뽀글이'인데, 이 이름은
+        털이 뽀글뽀글해서 지어진 이름이다.
+      </p>
+      
+
+    </div>
+  </body>
+</html>

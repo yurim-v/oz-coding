@@ -1,0 +1,53 @@
+<!--2024.04.01-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="x-ua-compatible" content="IE-edge">
+    <title>요소의 유형</title>
+
+    <style>
+      p{
+        display: inline;
+
+        width:100px;
+        height:100px;
+      } 
+      /*p의 margin도 사라지고 inline 요소로 바뀜*/
+      /*인라인 요소는 width 및 height으로 크기를 지정할 수 없다.
+        따라서, display 특성으로 inline으로 변경해줘도 크기 지정 x */
+
+      span{
+        display:block;
+      } /*블록으로 바꾼다고해서 margin이 생기는게 아님/ margin이 있어야 블록인게 아니라 둘은 별개임
+        개발자모드에서 차지하는 영역의 크기만 확인하면됨*/
+
+      h3{
+        display : inline-block;
+
+        width:200px;
+        height:200px;
+      }   /*인라인 요소인데 크기 지정 가능*/
+      /*블록레벨 요소이나, 옆으로 이어지는 레이아웃을 만들 때, 사용됨*/
+
+      h4{
+        display:none;
+      } /*개발자모드에서 코드는 확인되나, 화면이 나타나지 않음*/
+    </style>
+  </head>
+  <body>
+    <p>경제</p>
+    <p>정치</p>
+    <p>과학</p>
+    <p>생활</p>
+    <br/>
+    <span>하하</span>
+    <br/>
+    <h3>랄랄라</h3>
+    <h3>룰룰루</h3>
+    <br/>
+    <h4>난 안보일껄?</h4>
+    <h5> 움하하</h5>
+     <!--none 다음에 오는 요소는 마치 none으로 지정된 코드가 없는 것과 동일하게 화면에 표시됨-->
+  </body>
+</html>
