@@ -1,0 +1,44 @@
+<!--2024.04.01-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>겹치거나 넘치는 요소 다루기</title>
+
+    <style>
+      div{
+        width:100px;
+        height:100px;
+        position : relative;
+        color:white;
+      }
+      .div1{
+        background-color:orange; z-index:4;
+        overflow:hidden;
+      }
+      .div2{
+        background-color:red; bottom:50px; z-index:3;
+        overflow:scroll;
+      }
+      .div3{background-color:blue; bottom:100px; z-index:2;}
+      .div4{background-color:green; bottom:150px; z-index:1;}
+      /*position이 지정된 요소들 사이에 쌓이는 순서를 정하는 z-index
+        position이 지정되지 않으면 사용 x
+        값을 상대적으로 비교 / 상대적으로 큰 값이 나중에 쌓인다(=제일 위에 보인다.) */
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지
+      오렌지오렌지오렌지오렌지오렌지오렌지오렌지오렌지
+      <!--콘텐츠 박스 밖으로 내용이 삐져나가게 overflow 시킨다 -->
+    </div>
+    <div class="div2">
+      빨강빨강빨강빨강빨강빨강빨강빨강빨강빨강빨강
+      빨강빨강빨강빨강빨강빨강빨강빨강빨강빨강빨강
+    </div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </body>
+</html>
