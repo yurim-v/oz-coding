@@ -1,0 +1,53 @@
+<!--2024.04.01-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>문서의 제목</title>
+
+    <style>
+      div{
+        width:100px;
+        height:100px;
+        color:white;
+        background-color:orange;
+      }
+
+      .rel{
+        background-color:red;
+        position:relative;
+        top:50px;
+        left:50px;
+      }
+
+      .abs{
+        position:absolute; /* 문서의 흐름에서 제외되기 때문에 abs가 없는 것처럼 나머지가 한칸씩 위로 올라간다. */
+        top:30px;
+        right:30px;
+
+        /*상위 요소인 body와 html에 지정된 position이 없음
+           > 화면을 기준으로 이동한다. */
+      }
+
+      .scroll {
+        height:2000px;
+      }
+
+      .fixed{
+        position:fixed;
+        right:50px;
+        bottom:50px;
+        /*어떤 상황에서도 해당 위치에 고정된다
+         > 페이지의 스크롤을 내리고 올려도 지정한 위치에만 고정된다. */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="abs">1</div>
+    <div class="rel">2</div>
+    <div class="scroll">3</div>
+    <div class="fixed">4</div>
+
+  </body>
+</html>
