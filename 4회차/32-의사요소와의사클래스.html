@@ -1,0 +1,70 @@
+<!--2024.04.02-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>의사 클래스 & 의사요소</title>
+
+    <style>
+      .menu{
+        padding: 10px; 
+        border-bottom : 3px solid black; /* 밑에만 테두리 표시 */ 
+      }
+      
+      .menu > li {
+        display : inline-block; /* 블록 레벨 요소를 일렬로 배치하기 위해서 인라인 블록으로 변경 */
+        text-align : center;
+      }
+
+      li > a {
+        display : inline-block; /* a태그는 인라인 요소라 width가 적용되지 않기때문에 인라인블록으로 변경*/
+        width : 80px;
+        padding : 10px;
+        text-decoration : none ;
+      }
+
+
+      /* 의사클래스*/
+
+      a:hover{
+        color : white;
+        background-color : gray;
+      }
+
+      a:active{
+        color : white;
+        background-color : black;
+      }
+
+      li:nth-child(3){ /* li의 형제들 중에서 3번째 li 선택 // a 태그들은 서로 형제관계 아님 */
+        font-size : 20px;
+      }
+      /* nth-child() : 괄호 안에 n 입력 시, 다양한 응용 가능
+         입력된 n은 자연수로 인식
+         n 입력 : 모든 요소 선택
+         2n : 짝수 번쨰 요소 선택
+         2n-1 : 홀수 번째 요소 선택*/
+
+
+      /* 의사 요소 */
+      a::first-letter{
+        color : red; /* a태그 첫번째 글자만 색상 변경 */
+      }
+
+      a::after{ /* after :  a태그의 콘텐츠 뒤에 다른 콘텐츠를 추가 및 스타일링 할 수 있다.*/
+        content : "보기";
+        color:yellowgreen;
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="a">사전</a></li> <!-- 이동할 URL이 지정되지 않았을 때 href="a" 라고 일반적으로 입력한다.-->
+      <li><a href="a">뉴스</a></li>
+      <li><a href="a">증권</a></li>
+      <li><a href="a">지도</a></li>
+    </ul>
+  </body>
+</html>
