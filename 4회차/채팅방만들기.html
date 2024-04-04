@@ -1,0 +1,45 @@
+<!--2024.04.04-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>채팅방 만들기</title>
+    <link href="chat.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!--상세하게 class 이름 지정 및 div 및 시맨틱 태그로 구조 설정-->
+     <div class="container"> <!--채팅방 전체 영역-->
+      <main class="chat_screen"> <!--채팅방 상단 프로필 영역 + 중간 채팅메세지 올라오는 화면-->
+        <section class="chat_screen_bar"> <!--채팅방 상단 프로필 영역-->
+
+          <div class="user"> <!--채팅방 상단 프로필 사진 + 닉네임 + 친구 수 -->
+
+            <div class="user_column"> <!--채팅방 상단 프로필 사진 --> 
+              <div class="user_pic"> <!--채팅방 상단 프로필 사진-->
+              </div>
+            </div>
+          
+            <!--
+              [ 프로필 사진 ] 과 [ 닉네임 + 친구 수 ]를 일렬로 배치하려고 user_column class 지정 -->
+
+            <div class="user_column"> <!--채팅방 상단 닉네임 + 친구 수-->
+              <p class="user_nick">친구</p>
+              <p class="user_count">2</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <form class="chat_form"> <!--메세지 입력창 + 전송 버튼-->
+        <section class="chat_form_field"> <!--해당 부분은 굳이 section으로 안묶어도 된다.-->
+          <textarea class="chat_form_msg"></textarea>
+          <input type="submit" value="전송" class="chat_form_bt">
+        </section>
+
+      </form>
+     </div>
+
+  </body>
+</html>
