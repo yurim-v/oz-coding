@@ -7,24 +7,56 @@
     <title>박스 모델</title>
 
     <style>
+      *{
+        box-sizing:border-box;
+      }
+  
+      html{
+        height:100%;
+        background-color: red;
+      }
+    
+
+      body{
+        background-color:gray;
+        width:50%;
+        height: 100%;
+      }
 
       /*콘텐츠 영역 크기 변화*/
-      /* % : 내가 속한 영역을 기준으로 백분율 계산 
-        => width : 기준값 - body 요소 > 화면의 가로 크기 / height : body 영역의 높이 but 기준값이 없다.
-         ㄴ height는 %를 지정해도 body 영역의 요소들에는 적용이 안된다. */
+      /* % : 내가 속한 상위 태그의 영역을 기준으로 백분율 계산 
+        => area 클래스의 width 기준값 - 상위태그 body  > 화면의 가로 크기 > 유한한 값 > 굳이 상위태그의 값을 모두 지정하지 않아도 한계가 있는 값이라 상대적인 값이 적용됨/
+           area 클래스의 height : body 영역의 높이가 기준 but 기준값이 없다. > 무한한 크기를 가질 수 있다. > body의 상위태그인 html의 height이 지정되지 않았다.
+
+           html은 최상위 태그로 부모요소가 존재하지 않음 > html의 기준 값 : 웹 브라우저의 화면
+          */
       .area{
 
         /**원래 713.6 > 50%로 변경 시, 356.8px */
         width:50%;
-        height:100px;
+        height:50%;
+         /* height가 상대값 지정이 안되는 이유는 상위태그 body의 크기가 지정되지 않았고, 
+         body의 크기가 상대값으로 지정이되려면, 최상위태그 html의 크기를 지정해줘야한다.  
+         
+         결국, 페이지 화면을 꽉 채우기위해 body의 크기를 지정하려면 상위태그인 html의 크기를 지정해야하니까, body와 html의 크기를 모두 100% 지정해야함
+         
+         또한, body의 크기가 지정되지 않으면 내부에 들어가는 콘텐츠 요소들의 크기를 모두 px 지정값으로만 설정해야함 > 모든 값을 직접 조절해야해서 불편하다 ! */
+        background-color:yellow
         
       }
+
+      div{
+        height:800px;
+      }
+
     </style>
   </head>
-  <body>
+  <body >
      <h2>현진영 - 흐린 기억속의 그대</h2>
     <p>안개빛 조명은 흐트러진 내 몸을 감싸고</p>
     <p class="area">술에 취해 비틀거리는 나의 모습 이제는 싫어</p>
+    <div></div>
+   <p> 랄ㄹ라라</p>
 
   </body>
 </html>
