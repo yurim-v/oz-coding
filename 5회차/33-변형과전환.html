@@ -1,0 +1,106 @@
+<!--2024.04.08-->
+<!DOCTYPE html>
+<html  lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <meta name="author" content="KYR">
+    <meta name="description" content="변형과 전환">
+
+    <title>변형과 전환</title>
+
+    <style>
+      .parent, .parent0{
+        display:inline-block;
+        margin :50px 30px;
+      }
+
+      .child, .child0{
+        width: 150px;
+        height : 150px;
+        background-color:green;
+      }
+
+      /* transform  */
+      .parent:nth-child(1)>.child{
+        transform:translate(30px,50px);
+      }
+
+      .parent:nth-child(2)>.child{
+        transform:scale(1,1.5);
+      }
+
+      .parent:nth-child(3)>.child{
+        transform:skew(45deg);
+      }
+
+      .parent:nth-child(4)>.child{
+        transform:rotate(45deg);
+      }
+
+
+      /* transition */
+
+      .parent0:nth-child(8)>.child0:hover{
+        width:600px;
+        height:300px;
+        background-color:yellow;
+
+        transition-property : width; /* width가 변화할 때, 변화 시간 및 속도를 추가 지정하겠다*/
+        transition-duration:5s;
+        transition-delay:2s;
+        transition-timing-function:ease ;
+
+      }
+
+      .parent0:nth-child(8){
+        display:block;
+      }
+
+
+      .parent0:nth-child(7)>.child0:hover{
+        width:300px;
+        height:300px;
+        background-color:yellow;
+        transition: background-color 3s 1s linear , height 2s 0s linear;
+        /* transition이 적용되는 속성 추가 > , 쉼표로 구분 후 적어주면 된다.  */
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- transform -->
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <!-- transition -->
+    <div class="parent0">
+      <div class="child0"></div>
+    </div>
+
+    <div class="parent0">
+      <div class="child0"></div>
+    </div>
+
+    <div class="parent0">
+      <div class="child0"></div>
+    </div>
+
+    <div class="parent0">
+      <div class="child0"></div>
+    </div>
+  </body>
+</html>
