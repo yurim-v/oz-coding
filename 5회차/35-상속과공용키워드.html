@@ -1,0 +1,55 @@
+<!--2024.04.08-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>상속과 공용 키워드</title>
+
+    <style>
+      
+      .list{ /* div에 스타일 지정 */
+
+        /* 상속 가능 속성 */
+
+        color : brown;
+        font-weight: bold;
+        font-style:italic;
+
+        /* 상속 불가 속성 */
+
+        border: 3px dashed green;
+        padding:0;
+        /* div에만 적용 > 하위요소 ul 및 li에는 적용되지 않음 */
+
+      }
+
+      ul{
+        border : inherit;
+      
+      }
+
+      li:nth-child(3){
+        
+        /*상속되는 속성이지만, 받지 않고 기본값을 적용하겠다.*/
+        color : initial;
+        font-weight: initial;
+        font-style:initial;
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>마라톤 대회 참가 기록</h2>
+
+    <div class="list">
+      <ul>
+        <li>새해 맞이 대전 마라톤 대회</li>
+        <li>서울 국제 마라톤 대회</li>
+        <li>대전 대청호 벚꽃길 마라톤 대회</li>
+        <li>대전 3대 하천 마라톤 대회</li>
+      </ul> 
+    </div>
+  </body>
+</html>
