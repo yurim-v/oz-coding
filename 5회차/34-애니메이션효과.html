@@ -1,0 +1,99 @@
+<!--2024.04.08-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <title>애니메이션 효과</title>
+
+    <style>
+      .eyes{
+        width:440px;
+        margin:auto;
+      }
+
+      .eye:nth-child(1){
+        float:left;
+      }
+
+      /* float로 문서의 흐름에서 제외
+      ㄴ전체 문서의 흐름에서 제외되는 것이 아니라, 
+      상위 태그의 콘텐츠 영역에 내의 문서의 흐름에 제외된다.
+      따라서, right / left 지정 시, 페이지 양끝으로 붙는게 아니라,
+      상위 태그의 div의 콘텐츠 영역의 양 끝에 붙는다 !
+      > 상위 태그 div (eyes)의 width를 줄이면, 눈알 두개가 가까워진다. */
+
+      .eye:nth-child(2){
+        float:right;
+      }
+
+      .eye{
+        width:200px;
+        height:200px;
+        border: 5px solid black;
+        border-radius:100px;
+
+        position:relative; 
+        /* ball때문에 relative로 position 지정 
+          absolute나 fixed로 위치 지정 시, 문서의 흐름에 제외되면서,
+          absolute는 부묘 요소 또는 조상 요소(position이 없을 경우, 화면)를 기준으로 왼쪽 상단 구석에
+          2개의 eye class의 content가 겹쳐서 위치하게된다. 
+          
+          따라서 문서의 흐름에 포함되는 position은 static(기본)과 relative이나,
+          static에는 absolute가 적용되지 않기에 relative로 지정한다.*/
+      }
+
+      .ball{
+        width:50px;
+        height:50px;
+        background-color:black;
+
+        border-radius:25px;
+
+        position : absolute;
+        /*
+         상위 태그의 position 요소를 기준으로 이동한다.
+         eye에 position이 지정되어 있지 않으면, 즉, 상위 태그의 position이 지정되지 않으면,
+         화면을 기준으로 이동하여 원하는대로 구현이 안된다.
+        */
+        top: 30px;
+        left : 30px;
+
+        animation-name: moving;
+        animation-duration:3s;
+        animation-delay:0s;
+        animation-timing-function:linear;
+
+        /*애니메이션 추가 속성*/
+        animation-iteration-count:infinite;
+        /* infinite : 무한반복 / 반복 횟수를 지정해도 된다.*/
+
+        animation-direction:alternate;
+      }
+
+      .ball:hover{
+        animation-play-state:paused;
+      }
+
+      /* 애니메이션 효과 지정 */
+      @keyframes moving{
+        from{left:30px;}
+        to {left:120px;}
+      }
+
+
+  
+    </style>
+  </head>
+  <body>
+    <div class="eyes">
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+  </body>
+</html>
