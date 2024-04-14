@@ -1,0 +1,63 @@
+
+
+.chat_screen_text{
+  padding:0;
+  
+  /* 리스트의 기호가 사라짐 */
+  list-style-type:none;
+
+}
+
+.chat_screen_text > .text{
+  background-color:white;
+  width : 300px;
+  height:50px;
+
+
+  /* 두 말풍선 사이를 띄워주기 위해 아래 여백만 추가 */
+  margin:0 0 10px 0;
+
+  /*말풍선과 텍스트 사이의 간격을 주기위해 padding 지정 */
+  padding:10px;
+
+
+  border-radius:8px;
+  line-height:30px;
+   /* 말풍선의 총 높이 50px 중 위아래 padding 10px씩 지정
+    > 남는 content 영역 높이는 30px 
+    > line-height : 텍스트의 행 높이 지정 > 남는 30px를 행 높이로 지정
+                    > 마치 가운데 정렬이 된 것 처럼 적용할 수 있다. */
+
+  position:relative;
+  left:20px;
+
+} 
+
+.chat_screen_text > .text::after{
+  content:"";
+  /* 내용을 추가하지 않고 삼각형을 만들자 */
+
+  /* 테두리 오른쪽 및 아래 중 겹치는 영역만 표시됨 */
+  border-right: 16px solid white;
+  border-bottom:16px solid transparent;  /* transparent : 색상을 투명하게 지정 > 대각선으로 깎음 */
+
+  
+  /*원래 absolute > 상위 요소의 위치가 지정되지 않은 경우 화면을 기준으로 이동
+  > 의사 요소가 추가되지 않은 기존의 chat_screen_text에 위치가 지정되어있음
+  > 기준이되는 화면이 브라우저 화면이 아닌, 기존 chat_screen_text의 영역이 되는 것 */
+  position:absolute;
+  top:10px;
+  left:-10px;
+}
+
+.chat_screen_text > .text:hover{
+  background-color: wheat ;
+
+  transition:background-color 3s ease-in;
+}
+
+.chat_screen_text > .text:hover::after{
+  border-right: 16px solid wheat ; 
+
+  transition:border-right 3s ease-in;/* border의 색상을 변경 > background-color로 property 지정 x */
+}
