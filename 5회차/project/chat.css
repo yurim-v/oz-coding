@@ -1,0 +1,110 @@
+/*2024.04.14*/
+
+
+
+*{
+  box-sizing:border-box; 
+}
+
+html{
+  height:100%;
+}
+
+body{
+  height:100%; 
+  margin:0; 
+}
+
+.container{ 
+  height:100%;
+  
+  background-color:rgba(250, 215, 234, 0.475);
+}
+
+.chat_screen{
+  height:calc(100% - 120px); 
+}
+
+/*-------상태바-------*/
+
+.user{
+  background-color:white;
+  padding:16px; 
+  height:80px;
+}
+
+.user_column{
+  float:left;
+}
+
+.user_pic{
+  width:50px;
+  height:50px;
+  margin-right:10px;
+  border-radius:10px;
+  background-color: rgba(250, 215, 234, 0.475);
+}
+
+.user_nick, .user_count{
+  margin:5px;
+}
+
+.user_count{
+  font-size:12px;
+  color:gray;
+}
+
+/*-----------대화창-----------*/
+
+.chat-text{
+  height:calc(100% - 80px); 
+  /* 윗쪽에 지정됐다고 해서 80px - 100% 로 작성하면 안됨 
+  여기서 100%는 화면(html/ body)가 아닌 상위요소 chat_screen의 크기 전체를 의미함 */
+
+  overflow: scroll;
+}
+
+
+.chat_form{
+  height:120px;
+  background-color:white;
+}
+
+.chat_form_field{
+  height:120px;
+}
+
+.chat_form_msg{
+  width: calc(100% - 120px);  
+ height:120px;
+
+
+ font-size:24px; 
+ padding:10px;
+
+ resize:none; 
+ float:left;
+
+ 
+}
+
+
+.chat_form_bt{
+  width:120px;
+ height:120px;
+
+  border-radius:10px;
+  background-color:white;
+  font-size:18px;
+  float:right;
+}
+
+.chat_form_msg:focus{
+  outline:none;
+}
+
+.chat_form_bt:active{
+  background-color:rgb(221, 218, 218);
+}
+
+
