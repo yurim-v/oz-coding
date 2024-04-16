@@ -1,0 +1,73 @@
+<!--2024.04.16-->
+<!DOCTYPE html>
+<html lang="ko"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 동네에서 찾는 깻잎 알바</title>
+
+    <style>
+      /* 모듈과  무관하게 페이지 전체에 적용할 스타일은 내부 스타일 시트로 작성 */
+      *{
+        box-sizing:border-box;
+      }
+
+      html{
+        font-size:16px;
+      }
+      body{
+        margin:0;
+      }
+
+      .flex{
+        display:flex;
+      }
+    </style>
+
+    <link href="header.css" rel="stylesheet">
+    <link href="info.css" rel="stylesheet">
+    <link href="notice.css" rel="stylesheet">
+    <link href="banner.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <header class="header">
+        <div class="header-content flex">
+          <div class="header-content-logo">깻잎마켓</div>
+          
+          <nav class="header-content-nav flex"> <!--메뉴를 나타내는 시맨틱 태그-->
+            <ul>
+              <li>중고거래</li>
+              <li>동네업체</li>
+              <li class="active">알바</li>
+              <li>부동산</li>
+              <li>중고차 직거래</li>
+            </ul>
+          </nav>
+
+          <div class="header-content-input flex">
+            <span class="icon glass">
+              <input type="button" value="&#128269;">
+            </span>
+
+            <span>
+              <input type="text" class="search" placeholder="물품이나 동네를 검색해보세요.">
+            </span>
+
+            <span class="icon menu">
+              <input type="button" value="&#9776;">
+            </span>
+
+            <span>
+              <input type="button" class="chat" value="채팅하기">
+            </span>
+          </div>
+        </div>
+      </header>
+
+    </div>
+  </body>
+</html>
