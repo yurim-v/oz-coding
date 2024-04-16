@@ -98,6 +98,9 @@
   .glass input{display:block;}
   .search{display:none;}
 }
+ /* glass로 지정 시, 쿼리 조건에서 glass가 보이지 않는 이유는 상단 css에서 display:none;을 
+ span이 아닌 input에 지정했기 때문이다.
+ glass는 span의 class임 */
 
 @media screen and (max-width:770px){
   /*돋보기 + 메뉴 + nav 사라짐*/
