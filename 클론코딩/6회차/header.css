@@ -28,6 +28,8 @@
   height:1rem;
   margin-right:40px;
   line-height:40px;
+
+  white-space:nowrap;
 }
 
 .header-content-nav{
