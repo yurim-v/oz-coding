@@ -62,5 +62,6 @@
 
   .notice_container{
     display:block;
+    /*flex로 지정되어있는 요소의 유형을 바꿔주면 줄바꿈 효과를 나타낼 수 있다*/
   }
 }
