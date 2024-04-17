@@ -104,7 +104,7 @@
  span이 아닌 input에 지정했기 때문이다.
  glass는 span의 class임 */
 
-@media screen and (max-width:770px){
+@media screen and (max-width:768px){
   /*돋보기 + 메뉴 + nav 사라짐*/
   .chat, .header-content-nav{
     display:none;
