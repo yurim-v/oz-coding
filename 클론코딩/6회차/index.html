@@ -23,6 +23,11 @@
       .flex{
         display:flex;
       }
+
+      .main{
+        padding:4rem 0 5rem;
+        /* header의 크기가 64px(4rem)이기 때문에 상위 여백을 4rem으로 설정해야 header와 영역이 겹치지 않는다 */
+      }
     </style>
 
     <link href="header.css" rel="stylesheet">
@@ -68,6 +73,14 @@
         </div>
       </header>
 
+      <main class="main">
+        <section class="info">
+          <div class="info_text">
+            <h1>우리 동네에서 찾는<br/>깻잎 알바</h1>
+            <p>걸어서 10분 거리의<br/>동네 알바들 여기 다 있어요.</p>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
