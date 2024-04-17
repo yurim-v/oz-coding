@@ -2,7 +2,7 @@
 
 .info{
   width:100%;
-  height:19.6874rem;
+  height:15.5rem;
 
   background-color:rgba(29, 118, 31, 0.763);
 }
@@ -27,7 +27,7 @@
 }
 
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:768px){
   /* h1 작아지고 p 사라짐 */
 
   .info_text{
