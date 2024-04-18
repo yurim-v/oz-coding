@@ -1,0 +1,67 @@
+/* 2024.04.17*/
+
+
+.notice{
+  max-width:48rem;
+  margin:auto;
+}
+
+.notice_title{
+  font-size:1.625rem;
+  margin:3.75rem 0 2.5rem;
+  line-height:1.5;
+}
+
+.notice_container{
+  /* 추가될 article들의 배치 방식 지정 */
+  justify-content:space-between;
+  flex-wrap:wrap;/* article들이 여러 줄로 배치될 수 있게 설정*/
+}
+
+.notice_item{
+  padding:1.25rem 0 0 1rem;
+  flex-basis:48%; /*부모요소 flex container 크기의 48% 지정 > 절반정도 되는 크기로 지정 > 한 줄에 두개만 배치 가능 */
+  
+}
+
+.notice_thumb{
+  min-width:6rem;
+  min-height: 6rem;
+  max-height: 6rem;
+  background-color: rgb(25, 153, 81);
+
+  border-radius:1rem;
+}
+
+.notice_content{
+  margin-left:1rem;
+}
+
+.notice_content_title{
+  line-height:1.32;
+  font-size:1.125rem;
+}
+
+.notice_content_address{
+  line-height:1.4;
+  font-size:0.875rem;
+  color:rgb(109, 109, 109);
+}
+
+.notice_content_pay{
+  font-weight:700;
+}
+
+
+@media screen and (max-width:768px){
+  .notice_title{
+    font-size:1.2rem;
+    margin:2.65rem 0 0.7rem 1rem;
+    line-height:1;
+  }
+
+  .notice_container{
+    display:block;
+    /*flex로 지정되어있는 요소의 유형을 바꿔주면 줄바꿈 효과를 나타낼 수 있다*/
+  }
+}
