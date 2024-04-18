@@ -1,0 +1,38 @@
+<!-- 2024.04.18 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>자바스크립트 동작원리 - 출력해보기</title>
+
+  </head>
+  <body>
+    <script>
+      // 객체 window 뒤에 붙는 명력문 alert() : 기능 (= 메소드)
+      // 괄호 내부에 alert 경고창에 들어갈 문구는 '' 로 감싸져야한다 !
+      window.alert('나는야~ 경고창을 띄우지~')
+      window.alert('작은 따옴표 내부에 문구를 쓰면 되지~') 
+      // JS는 작성된 순서에 따라 차례대로 명령이 수행된다 !
+
+      /*
+      JS는 한 줄에 명령이 1개만 가능!
+      window.alert('첫번째')   window.alert('두번째') > 에러  !!
+      
+      다만, 명령문 끝에 세미콜론 ; 을 붙이면 한 줄에 두개 이상 쓸 수 있다 !
+      window.alert('첫번째');  window.alert('두번째') > 에러 X  
+      */
+
+      /* 자바스크립트 명령 실행 절차
+      입력 :window(웹브라우저)야, alert 명령을 수행해라 !
+
+      처리 : 명령을 전달받은 웹브라우저는 명령을 실행시킨다.
+
+      출력 : 처리한 결과인 경고창이 화면에 나타난다 !
+      */
+    </script>
+    
+  </body>
+</html>
