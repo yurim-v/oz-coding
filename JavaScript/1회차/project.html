@@ -1,0 +1,41 @@
+<!-- 2024.04.20 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>사용자 정보를 입력받고 출력하자 !</title>
+
+    <style>
+      /* 자바 스크립트로 수정한 content에도 동일하게 CSS가 적용된다 ! */
+      #name{
+       color : blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 id="name"></h1>
+    <p id="hobby"></p>
+    <p id="song"></p>
+
+    <!-- 비어있는 content를 자바스크립트로 입력받아 표시해보자 ! -->
+    <script>
+
+      const name_element = document.querySelector('#name');
+      let name = prompt('당신의 이름은?');
+      name_element.textContent = name; // prompt로 입력받은 데이터가 h1의 콘텐츠로 화면에 표시됨
+
+      const hobby_element = document.querySelector('#hobby');
+      let hobby = prompt('당신의 취미는?');
+      hobby_element.textContent = `취미 : ${hobby}`; //템플릿 리터럴로 표현
+
+      //세 줄로 작성했던 코드를 한 줄로 길게 작성해보기
+      document.querySelector('#song').textContent = `좋아하는 노래 : ${prompt('좋아하는 노래는?')}`;
+
+    </script>
+    
+  </body>
+</html>
