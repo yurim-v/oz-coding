@@ -1,0 +1,45 @@
+<!-- 2024.04.20 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM</title>
+
+  </head>
+  <body>
+
+    <p>대한민국의 역습입니다.</p>
+    <p class="comment">손흥민이 몰고 갑니다, 크로스 !</p>
+    <p class="comment" id="goal">조규성의 환상적인 마무리~~!</p>
+
+    <script>
+      // 입력 > 처리 > 출력
+      const p1 = window.document.querySelector("p"); // p1이라는 객체 형성
+      console.log(p1.textContent);
+
+      /*
+       html 속 p태그의 content를 직접적으로 바꾸지 않고, 내용을 바꿀 수 있다 !
+       > 우리가 자바스크립트로 바꾸는 것은 html문서가 아니라, 그 구조체인 DOM을 바꾸는 것이다 !!
+       */
+      p1.textContent = '오늘은 비가 오는 날이다.';
+
+      //class가 comment인 첫번째 요소 선택
+      const p2 = window.document.querySelector('.comment'); 
+      console.log(p2); // 
+      p2.textContent = '주륵주륵 잘도 내린다.';
+      
+      /*
+      p2 : <p class="comment">손흥민이 몰고 갑니다, 크로스 !</p>
+      p2.textContent로 content를 바꾸는게, 상수인 p2를 바꾸는건 아님 ! 혼동하지 말자! */
+
+      let p3 = document.querySelector('#goal');
+      p3.textContent = '벌써 날이 어두워졌다.';
+    
+
+    </script>
+    
+  </body>
+</html>
