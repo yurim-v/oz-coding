@@ -1,0 +1,38 @@
+<!-- 2024.04.20 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>문자열 & prompt()</title>
+
+  </head>
+  <body>
+
+    <script>
+      let apple;
+      apple='사과';
+      console.log(apple);
+      console.log('사과'); // 문자열을 감싸는 따옴표는 콘솔에 표시되지 않는다.
+
+      // 숫자, 문자, 기호들이 조합된 문자열을 자료로 사용할 수 있다 !
+      const order = '아메리카노 1잔 & 라떼 2잔 주세요 !';
+      console.log(order);
+
+      // 문자열 이어붙이기
+      let banana ='바나나';
+      console.log(apple+banana);
+
+      //prompt(x) : x는 안내 문구를 나타냄 > prompt는 사용자에게 문자열을 입력받고 반환한다.
+      const answer =  window.prompt('내가 좋아하는 과일은?');
+      alert(answer); // 입력한 값이 사용되어 경고창으로 나타난다. 
+      //입력 후 취소를 누르면, 값이 반환되지 않으면서 null이라고 나타난다 !
+      // null : 값 없음
+      
+
+    </script>
+    
+  </body>
+</html>
