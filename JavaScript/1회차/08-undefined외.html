@@ -1,0 +1,48 @@
+<!-- 2024.04.20 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>undefined 외 </title>
+
+  </head>
+  <body>
+
+    <script>
+      //값을 아직 정의하지 않음 >  undefined;
+      let name;
+      console.log(name);
+
+      //undifined도 의도적으로 정의해줄 수 있는 키워드
+      let name_undef = undefined;
+      console.log(name_undef);
+
+      // 데이터 지정 
+      name = '김유림';
+      console.log(name);
+
+      // null : 의도적으로 데이터가 없다는 것을 지정하는 키워드
+      name = null;
+      console.log(name);
+
+      //prompt의 입력창의 취소를 누르면 null 값으로 반환
+      // prompt에 아무 것도 입력하지 않고서 확인을 누르면, 빈 문자열이 값으로 반환 > null이 아니다.
+      console.log(prompt('값의 유형 확인해보기'));
+
+      //불린(boolean) 자료형
+      console.log(typeof true);
+      console.log(typeof false);
+
+      let human = window.confirm('사람이 맞습니까?');
+      console.log(human);
+      console.log(`사람이 맞습니까? ${human}`);
+
+    </script>
+    
+
+
+  </body>
+</html>
