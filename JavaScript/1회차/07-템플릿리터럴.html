@@ -1,0 +1,37 @@
+<!-- 2024.04.20 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>템플릿 리터럴</title>
+
+  </head>
+  <body>
+
+    <script>
+      const dog ='강아지';
+      const cat = '고양이';
+      console.log(typeof dog); // string 즉, 문자열로 나온다. 
+
+      //템플릿 리터럴
+      const modi = '귀여운';
+      const prettydog = `${modi} ${dog}`; //데이터 삽입 가능
+      console.log(typeof prettydog);
+      console.log(prettydog);
+
+      //prompt() 사용 > 데이터를 반환하는 메소드를 삽입
+      prompt('좋아하는 동물은 ?');
+      const prettypet = `${modi} ${prompt('좋아하는 동물은 ?')}`;
+      console.log(prettypet);
+
+      /* 
+      템플릿 리터럴로 데이터를 삽입하고, 삽입한 데이터로 문자열을 만드는 방식을
+      "문자열 포맷팅" 이라고 한다.
+      */
+    </script>
+    
+  </body>
+</html>
