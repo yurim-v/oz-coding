@@ -1,0 +1,59 @@
+<!--2024.05.01-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>creatElement & append & appendChild</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <div id="container">  </div>
+    
+    <script>
+
+      const div_choose = document.getElementById('container');
+
+
+      //-----------HTML에 없는 div 태그 하나를 만들어 주자.
+
+      const box = document.createElement('div')
+      console.log(box); //<div></div> 태그가 하나 형성됨 > 화면에 아직 보이지 않음
+
+      box.style.color = 'blue'; 
+      // CSS > color : blue; 를 자바스크립트로 표현
+      // 자바스크립트의 스타일 속성은 숫자 또는 문자열로만 표현이 가능함
+
+      box.style.width = '200px';
+      box.style.height = '200px';
+      box.textContent = '알 것 같은데 모르겠다.' // 아직도 화면에 표시가 되지 않는다.
+
+
+     // 화면에 표시해주자.
+
+     div_choose.appendChild(box); 
+     /* 
+     html의 div의 하위 태그로 JS로 만든 div를 넣어주자. 
+     즉, html 문서 내 div의 콘텐츠 즉, 자식요소로 JS로 만든 div를 추가하자.
+
+     마치 html 문서가 아래와 같이 변경된 것 처럼 DOM을 수정하여 페이지를 나타내보자 !
+     ---------------------------------------------------------------
+
+     <div id="container"> 
+        <div style="color:blue; width:200px; height:200ox;">
+          알 것 같은데 모르겠다.
+        </div>
+     </div>
+     */
+
+     //div_choose.append(box); > console.log(div_choose.append(box)) : 값이 반환 x > undefined가 출력
+
+    </script>
+  </body>
+</html>
