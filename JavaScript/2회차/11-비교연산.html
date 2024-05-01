@@ -1,0 +1,40 @@
+<!--2024.05.01-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>비교 연산 </title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <script>
+ 
+      let age = parseInt(prompt("당신의 나이는 ? - 숫자로 자료형 변환"));
+      console.log(typeof age);
+
+      //----------- 크기 비교 --------------
+      console.log(`age > 20 : ${age > 20}`); // 20 초과 -> false
+      console.log(`age >= 20 : ${age >= 20}`); // 20 이상 -> false
+
+
+      //----------- 등가 비교 --------------
+      let age_string = prompt("당신의 나이는 - 문자열 ?");
+      console.log(20 == age_string);
+      console.log(20 === age_string); // prompt 입력 값 : string , 비교대상 20 : number
+
+
+      //----------- 문자열 비교 --------------
+
+      let name = prompt("당신의 이름은 ?");
+
+      document.write(`이름 : ${name} <br/>`); //  document.write() : DOM에 코드를 추가할 때 사용하는 속성
+      document.write(`찾는 사람과 일치하는가 ? ${"유림" === name}`); // 결과값 : boolean
+    </script>
+  </body>
+</html>
