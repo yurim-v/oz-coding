@@ -1,0 +1,64 @@
+<!-- 2024.04.29 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="KYR">
+    <meta name="description" content="JS (1) - 복습">
+
+    <title>JS (1) - 복습</title>
+  </head>
+  <body>
+    <p>오늘은 강의 재생이 안된다.</p>
+    <p class="study">공부해야하는데 큰일이다.</p>
+    <p class="study" id="tmw">괜찮아, 내일이 있잖아 !</p>
+
+    <script>
+      window.alert('집중할 준비가 됐는가?');
+
+      console.log(8);
+      console.log(8+8);
+      console.log(7/3);
+      console.log(7%3);
+
+      let a = 2 ;
+      a +=5;
+      console.log(a);
+
+      let dinner = prompt('오늘 저녁은 무엇을 먹었나요?');
+      console.log(dinner);
+      let dessert='녹차라떼';
+      console.log(dinner+dessert);
+
+      const menu = `오늘 먹은 것 : ${dinner}, ${dessert}`;
+      console.log(menu);
+
+      let unde ;
+      console.log(unde);
+      let null_test = prompt('취소 누를 것');
+      console.log(null_test);
+
+      let bool = window.confirm('배부르다면 확인을 누르세요')
+      console.log(bool);
+
+      const p1 = window.document.querySelector('p');
+      
+      console.log(p1); 
+      /* 이 콘솔의 출력이 <p>오늘은 강의 재생이 안된다.</p> 아니라, <p>공부하면 되지 !</p>로 나오는 이유
+        : 콘솔 -> 자바스크립트 코드를 테스트하는 용도 
+        -> 콘솔 로그 : 테스트 결과를 개발자도구의 콘솔에 나타내는 메소드
+        -> 콘솔 로그는 최종적으로 변경된 코드를 기준으로 출력 값을 나타낸다
+
+        -> console.log(p1) : HTML의 DOM 중 첫번쨰 p태그를 지정 > p태그의 콘텐츠가 아닌 p태그 자체를 지정
+
+        -> console.log(p1.textContent) : p태그가 아닌 p태그의 콘텐츠를 불러옴 -> 변경된 콘텐츠가 아닌 html의 기존 콘텐츠가 출력
+        */
+       
+      p1.textContent= '공부하면 되지 !';
+      console.log(p1.textContent);
+      console.log(p1);
+    </script>
+  </body>
+</html>
