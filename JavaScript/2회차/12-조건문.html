@@ -1,0 +1,45 @@
+<!--2024.05.01-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>조건문</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <p></p>
+    
+    <script>
+
+      const h1 = document.querySelector('h1');
+      const p = document.querySelector('p');
+
+      const isThere = confirm('버스를 타실 건가요?');
+
+      if (isThere){
+        h1.textContent = '당신의 버스 요금은?';
+      }
+
+      
+      const age = parseInt(prompt('당신의 나이는 ?'));
+
+      if(age >= 20 ){
+        p.textContent = '버스 요금은 1,500원 입니다.'
+      }
+      else if(age >= 8){  // 상위 조건을 제외한 나머지 영역에서 조건 정의 > [ 8이상 20미만 ]이 조건
+        p.textContent = '버스 요금은 1,100원 입니다.'
+      }
+      else{ // 8 미만일 때
+        p.textContent = '무료 입니다.'
+      }
+      
+    </script>
+  </body>
+</html>
