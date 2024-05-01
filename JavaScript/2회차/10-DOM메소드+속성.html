@@ -1,0 +1,60 @@
+<!--2024.05.01-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM 메소드와 속성</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <h1 id="song-title" class="heading" title="VOS의 2019년 발매곡">
+      <span>다시 만날까봐</span>
+      <span>V.O.S</span>
+    </h1>
+
+    <p class="lyrics"> 인스타로 몰래 보는 너의 하루, 누가 봐도 헤어진 티를 내</p>
+
+    <p class="lyrics">팔로우 다 끊고서 좋아요는 왜 눌렀냐</p>
+
+    <script>
+      //-----------------DOM 메소드 -----------------------
+
+      console.log(document.querySelector('.lyrics')); //첫 번째 class 선택
+
+      console.log(document.querySelectorAll('.lyrics')); //.lyrics에 해당하는 모든 선택자 선택
+
+      console.log(document.getElementsByClassName('lyrics')); 
+      //class 이름을 기준으로 선택 > CSS 선택자 기준 X > . 붙이면 안됨
+
+      const title = document.getElementById('song-title');
+      console.log(title); 
+
+      document.write('<h3>오늘 날씨 좋다</h3>'); 
+
+
+      //----------------DOM 속성 ---------------------------
+
+      console.log(title.textContent);
+      console.log(title.innerText);     // 둘다 content 선택
+      // textContent : 코드 상의 공백을 포함하여 콘텐츠를 선택한다.
+      // innerText : 공백을 포함하지 않는다.
+
+      console.log(title.innerHTML); // 코드를 텍스트 형태로 출력
+
+      console.log(title.className); // title의 모든 class 이름을 보여줘
+
+      console.log(title.style); // 정의된 CSS 스타일 내용 반환
+
+      console.log(title.title); // title 속성값 반환
+      
+
+    </script>
+  </body>
+</html>
