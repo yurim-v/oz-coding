@@ -1,0 +1,62 @@
+<!--2024.05.02-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>몬스터 잡기 게임_혼자 먼저 해보기</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div id="monster"></div>
+    
+    <script>
+      const dmg = parseInt(prompt('1회 공격 시, 몬스터에게 가해지는 데미지를 입력하세요. (양의 정수만 입력가능)'));
+      const div = document.getElementById('monster');
+    
+      /*
+       append / appendChild를 통해 새로 생성한 요소와 html 요소를 부모 자식으로 연결해 줄 때,
+       부모 요소는 [ 단일 요소 ]로 선택이 되어야한다.
+       따라서. const div = document.getElementsByClassName('monster'); 으로 선택하면,
+       html의 요소가 div 하나라 단일 요소가 선택되는 것 처럼 보이지만,
+       getElementsByClassName은 class의 이름이 monster인 모든 class를 선택하는 메소드로,
+       단일 요소를 선택하는 메소드가 아니기에 에러가 발생한다 !
+       */
+
+      if(dmg>0){
+
+        const start = document.createElement('h1');
+        div.appendChild(start);
+        start.textContent = '몬스터 잡기 게임을 시작합니다.'
+        
+        for(let cnt = 1; 100 - dmg*cnt >=0; cnt+=1){
+          const p1 = document.createElement('p');
+          const p2 = document.createElement('p');
+          div.appendChild(p2);
+          div.appendChild(p1);
+          
+          p2.textContent = `몬스터를 ${cnt}번 공격했습니다 !`
+          p1.textContent = `몬스터의 남은 HP는 ${100-dmg*cnt} 입니다.`
+        
+        }
+
+        const end = document.createElement('h3');
+        div.appendChild(end);
+        end.textContent = '게임이 종료되었습니다 !'
+        end.style.color='red';
+        end.title='게임을 새로 시작하고 싶다면 새로 고침을 해주세요.'
+      }
+      else {
+        prompt('데미지를 잘못 입력하셨습니다. 양의 정수로 입력해 주세요.')
+      }
+      
+      
+
+    </script>
+  </body>
+</html>
