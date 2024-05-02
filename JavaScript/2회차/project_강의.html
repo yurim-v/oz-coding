@@ -1,0 +1,65 @@
+<!--2024.05.02-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>몬스터 잡기 게임_혼자 먼저 해보기</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div id="monster"></div>
+    
+    <script>
+      const dmg = parseInt(prompt('1회 공격 시, 몬스터에게 가해지는 데미지를 입력하세요. (양의 정수만 입력가능)'));
+      const div = document.getElementById('monster');
+      let count = 0;
+      let HP = 100;
+    
+
+      if(dmg>0){
+        
+        const start = document.createElement('h1');
+        div.appendChild(start);
+        start.textContent = '몬스터 잡기 게임을 시작합니다.'
+    
+
+        while(HP>0){
+          count +=1;
+          HP -=dmg;
+          const p1 = document.createElement('p');
+          const p2 = document.createElement('p');
+
+          div.append(p1);
+          div.append(p2);
+
+          p1.textContent=`몬스터를 ${count}번 공격했습니다 ! `
+          if(HP < 0){
+            HP = 0;
+            p2.textContent=`몬스터의 남은 HP는 0입니다 ! `
+          }
+          else{
+            p2.textContent=`몬스터의 남은 HP는 ${HP} 입니다 ! `
+          }
+        }
+
+        const end = document.createElement('h3');
+        div.appendChild(end);
+        end.textContent = '게임이 종료되었습니다 !'
+        end.style.color='red';
+        end.title='게임을 새로 시작하고 싶다면 새로 고침을 해주세요.'
+      }
+      else {
+        prompt('데미지를 잘못 입력하셨습니다. 양의 정수로 입력해 주세요.')
+      }
+      
+      
+
+    </script>
+  </body>
+</html>
