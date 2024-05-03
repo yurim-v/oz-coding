@@ -1,0 +1,55 @@
+<!--2024.05.03-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> 인수와 반환 </title>
+
+    <style>
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="container"></div>
+
+    <script>
+      //함수를 호출할 때 마다, p내용에 다른 내용이 들어가게 하자 !
+
+      // 매개변수를 통해 다른 인수를 삽입하자 !
+      function create_p(content, color){
+        const p = document.createElement('p');
+        p.textContent= content;
+        p.style.color= color;
+        document.getElementById('container').append(p);
+
+        return `방금 만든 태그의 콘텐츠 : ${content}, 색상 : ${color}`;
+        
+      }
+
+      // 인수 삽입
+      console.log(create_p('첫번째 문단', 'red'))
+      console.log(create_p('두번째 문단', 'green'))
+      console.log(create_p('세번째 문단', 'blue'))
+
+      // 반환 기능 사용하기
+      function test(){
+        console.log('반환을 살펴보자');
+
+        return '짜자잔!';
+
+        console.log('return 밑에 있는 코드는 작동하지 않는다.');
+
+      }
+
+      // return으로 값을 반환하지 않으면 undefined가 출력된다.
+      console.log(test());
+    
+
+    </script>
+  </body>
+</html>
