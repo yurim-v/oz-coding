@@ -1,0 +1,97 @@
+<!--2024.05.03-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>강의 내용</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <input id="talk">
+    <input id="push" type="button" value="push">
+    <script>
+
+      // 사용자가 버튼을 클릭하면 input의 내용이 읽혀진다.
+
+      const input  = document.getElementById('talk');
+      const button = document.getElementById('push');
+
+      button.addEventListener('click', function(){
+
+        // console.log(input.value); // input.textContent 아님 !!
+
+        const p = document.createElement('p');
+        p.textContent = input.value;
+        document.body.append(p);
+      })
+
+
+      // 이벤트명 - keyup : 사용자가 키보드를 눌렀다가 뗴었을 때 -> 입력했을 때
+      input.addEventListener('keyup', function(event){
+        console.log(event.target.value); 
+      } )
+        /* 
+        event : keyup
+        event.target : input
+        event.target.value : input에 입력한 값
+        */
+
+    </script>
+
+    <!------------------------------------------------------------------------------------->
+
+    <hr>
+
+    <form>
+
+      <label> 이름_1
+        <input name="name_1"> 
+      </label> 
+
+      <label> 이름_2
+        <input name="name_2"> 
+      </label> 
+
+      <!--서버로 전송되는 input 값을 구분하는 식별자 !-->
+      
+      <input type="submit"> <!--action으로 지정한 서버 주소로 input 값을 전송하는 버튼-->
+
+    </form>
+  
+    <!-- [ form ]에 대한 제출 버튼을 누르면, input 값들을 서버로 전송 -> 자동으로 웹페이지는 새로고침 된다. -->
+
+    <script>
+
+      const form_1 = document.querySelector('form');
+
+      // 제출 버튼을 눌렀을 때, 자동으로 발생하는 새로고침을 막고 싶다 !
+      form_1.addEventListener('submit', function(event){
+
+        //prevent(막다) + Default(고정값) = 고정된 처리를 막겠다.
+        event.preventDefault() ; // 자동으로 발생하는 [ 제출의 고정된 처리 = 새로고침 ]을 막는다.
+
+        /* 
+        event.target : form_1 = HTML의 form 태그
+        event.target.name_1 : form 태그 내의 name이 name_1인 요소 = <input name="name_1">
+        event.target.name_1.value : <input name="name_1">의 입력 값
+        */
+
+        const p2 = document.createElement('p');
+        p2.textContent = `[ ${event.target.name_1.value} ]의 두번째 이름은 [ ${event.target.name_2.value} ]이다.`;
+
+        document.body.append(p2);
+
+      })
+
+
+    </script>
+
+  </body>
+</html>
