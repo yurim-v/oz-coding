@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+  font-size: 16px;
+}
+
+body{
+  height: 100%;
+  margin:0;
+  background-color:blanchedalmond;
+}
+
+#container{
+  background-color: white;
+  margin:4rem auto;
+  width:40rem;
+  height:28rem;
+  border-radius:15px;
+  border:1px solid lightgray;
+}
+
+table{
+  margin:1.5rem auto 0.7rem;
+}
+
+.content{
+  text-align : right;
+  font-weight:bold;
+  padding-right:0.5rem;
+  padding-bottom:0.5rem;
+  
+}
+
+td > input, select{
+  width : 14rem;
+  height:1.8rem;
+  padding-left:0.3rem;
+}
+
+.intro{
+  width : 14rem;
+  resize:none;
+  height:6rem;
+}
+
+.end{
+  text-align: center;
+}
+
+.button{
+  width:5rem;
+  height:2rem;
+  
+}
