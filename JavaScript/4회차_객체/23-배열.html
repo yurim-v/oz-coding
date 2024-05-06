@@ -1,0 +1,96 @@
+<!--2024.05.06-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>배열</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+
+    <script>
+
+      const aespa = ['카리나', '윈터', '지젤', '닝닝'];
+
+      console.log(aespa);
+
+      // 인덱스 번호로 배열의 데이터에 접근
+      console.log(aespa[0]);
+      console.log(aespa[1]);
+      console.log(aespa[2]);
+      console.log(aespa[3]);
+
+      console.log(aespa[9]); // undefined
+
+      aespa[0] = '유지민'
+      aespa[1] = '김민정'
+      aespa[2] = '애리'
+      aespa[3] = '닝이줘'
+
+      console.log(aespa);
+
+      // 인덱스 번호를 기반으로 배열은 데이터를 보관 -> for문을 통해 데이터에 접근하기도 한다 !
+      for(let i = 0; i<4; i+=1){
+        console.log(aespa[i]);
+      }
+
+
+      // 배열의 메소드 사용해 보기.
+
+      // push() : 배열에 1개 이상의 요소를 추가 
+      aespa.push('ae-aespa'); 
+      console.log(aespa);
+      console.log(aespa[4]); // 배열의 길이도 추가된 요소만큼 늘어남
+
+      //-----------------------------------------------------------------------
+
+      // pop() : 배열의 가장 끝에 있는 요소 1개만 제거 가능
+      aespa.pop();
+      console.log(aespa); 
+
+      //-----------------------------------------------------------------------
+      
+      console.log(aespa.indexOf('유지민'));
+      console.log(aespa.indexOf('김유림')); // 없는 요소 -> -1 반환
+
+      //-----------------------------------------------------------------------
+
+      // splice() : 인덱스 번호로 접근 -> 원하는 수만큼 요소 제거 및 추가
+
+      /*요소 제거 
+      aespa.splice(0, 3) // 인덱스 번호 0번에서 부터 3개 제거 -> 인덱스 0번 ~ 2번 제거
+      console.log(aespa);  // 닝이줘만 출력됨
+      */
+
+      // 요소 제거 후 추가 가능
+      // 추가되는 값의 개수 제한은 없음 -> 제거한 개수보다 많거나 적게 추가 가능
+      aespa.splice(0, 2, "로켓펀처", "아마멘터", "갓제너글로시"); 
+      console.log(aespa); 
+
+      //-----------------------------------------------------------------------
+
+      // forEach() : 배열 내의 각각의 개별 요소마다 차례대로 1번씩 함수가 실행된다. 
+      aespa.forEach(function(){
+        console.log('요소의 개수 만큼 실행된다.') // splice로 요소 제거 후 추가해줬기 때문에 요소는 총 5개 -> 5번 함수가 실행된다
+      })
+
+      // 함수가 실행될 때 대상이 되는 개별 요소는 [ 매개변수 ]를 통해 받아올 수 있다.
+      aespa.forEach(function(item){
+        console.log('요소의 개수 만큼 실행된다.' + item) // splice로 요소 제거 후 추가해줬기 때문에 요소는 총 5개 -> 5번 함수가 실행된다
+      })
+
+
+      //-----------------------------------------------------------------------
+      console.log(aespa.length);
+
+
+    </script>
+  </body>
+</html>
