@@ -1,0 +1,57 @@
+<!--2024.05.06-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>객체 생성자</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    
+    
+    <script>
+
+      // 생성자 : 객체를 정의하는 용도로 정의한 함수
+      // [ 생성자 ]를 통해 자바스크립트에서 정의되지 않은 [ 객체 ]를 새로 생성할 수 있다 !
+
+
+      // 가수를 정의하는 객체를 만들어보자 !
+
+      function Aespa(){
+        this.name = 'aespa'
+        this.member = "카리나, 윈터, 지젤, 닝닝" // 객체 속성 설계
+
+        this.debut = function(){ // 객체 기능 설계
+          console.log("모든 걸 삼켜버릴 Black Mamba !");
+        } 
+      }
+
+      const aespa = new Aespa();
+      console.log(aespa.name);
+      console.log(aespa.member);
+      aespa.debut();
+      
+
+      // 매개 변수를 포함한 생성자 정의
+
+      function Singer(name, Song){
+        this.name = name
+        this.song = Song
+      }
+
+      const newJeans = new Singer('뉴진스', "Attention");
+      const shinee = new Singer("사이니", "누난 너무 예뻐"); 
+      // 매개변수를 통해 다른 데이터를 갖는 여러 객체를 정의할 수 있다.
+      
+      
+
+    </script>
+  </body>
+</html>
