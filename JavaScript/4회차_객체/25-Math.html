@@ -1,0 +1,75 @@
+<!--2024.05.10-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>빌트인 객체 Math</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <button id = 'draw'> 추첨 </button>
+    <p id = 'number'></p>
+    
+    <script>
+
+      const bt = document.getElementById('draw');
+      const p  = document.getElementById('number');
+
+      console.log(Math); // Math 객체가 가진 다양한 메소드 및 속성을 확인할 수 있음
+
+      console.log(Math.abs(-4)); // 절대값 반환
+
+      // -----------------------------------------------------------------------
+
+      // 수학적 연산이 아니여도 유용하게 사용되는 메소드
+
+     let ran =  Math.random(); // 0 ~ 1 사이의 숫자를 랜덤으로 반환
+
+     // 난수인 ran을 정수로 변환해보자 !
+
+     // 1. 정수의 범위 정의 -> ex ) 1~10 사이의 정수를 출력하자 
+
+     console.log(ran * 10) // 소수 * 10 : 0 ~ 10 사이의 난수 
+
+     // 2. 소수점 이하 지우기
+     
+      let int = Math.floor(ran*10);
+      console.log(int);
+      // floor() : 숫자보다 작거나 같은 수 중에서 가장 큰 정수를 반환 -> 소수점 제거하는 효과가 있음
+
+      // 여기까지하면  0 ~ 9 출력 가능
+
+
+  
+      // 3. 0이 나오지 않도록 하자
+
+      // console.log( Math.floor(ran*10) + 1); 
+      /* 나올 수 있는 수 : 1 ~ 10 출력 가능 -> 결과적으로 10은 랜덤 숫자 값의 최대값 / 1은 최소값이 된다.
+
+      console.log( Math.floor(ran*10) + 1); 를 다시 표현해보면 */
+
+      const MAX_num = 10;
+      const MIN_num = 1;
+      /*
+      console.log( Math.floor(ran * MAX_num) + MIN_num);
+      */
+      
+
+      //---------------------------------------------------------------------------------
+
+      // 버튼을 클릭할 때 마다 생성되는 랜덤숫자 p태그에 표시
+
+      bt.onclick = function(){
+        p.textContent =Math.floor((Math.random() *  MAX_num) + 1) ;
+      }
+
+    </script>
+  </body>
+</html>
