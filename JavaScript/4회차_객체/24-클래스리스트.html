@@ -1,0 +1,71 @@
+<!--2024.05.10-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>클래스 리스트</title>
+
+    <style>
+      .DJ_Pack{
+        border-radius : 200px ;
+      }
+    </style>
+  </head>
+  <body>
+
+    <img src="../images/IMG_6178.jpg" alt ='지금 내 마음' width = '400''>
+    <br>
+    <button id = 'add' >ADD STYLE</button>
+    <button id = 'remove' >REMOVE STYLE</button>
+    <button id = 'toggle' >TOGGLE STYLE</button>
+    
+    <script>
+
+      let img = document.querySelector('img');
+
+      let add = document.getElementById('add');
+      let rem = document.getElementById('remove');
+      let tog = document.getElementById('toggle');
+
+      console.log(img.classList)
+
+      add.onclick =function(){
+        img.classList.add("DJ_Pack") // img 태그에 class 추가됨
+
+        console.log(img.classList.contains("DJ_Pack")); // contains() : class 유무 확인 -> boolean으로 출력
+      
+        console.log(img.classList.item(0)) // item(index_number) : 인덱스 번호에 해당하는 class name 반환
+      }
+
+      rem.onclick =function(){
+        //img.classList.remove("DJ_Pack") : img 태그의 class 중 DJ_Pack 삭제
+        console.log(img.classList.contains("DJ_Pack")); 
+
+        img.classList.replace("DJ_Pack",'park_MS');
+        // replace("A",'B') : 기존에 있던 class A를 B로 대체
+      }
+
+      /*
+      add와 remove를 통해 class를 추가했다가, 삭제했다가 변경할 수 있음
+
+      -> class 제어(추가 및 삭제)를 통해 추가한 DJ_Pack 클래스에 지정된 스타일을 제어할 수 있다 ! */add
+
+
+
+      tog.onclick =function(){
+        img.classList.toggle("DJ_Pack") //toggle() : 있으면 삭제, 없으면 추가
+        console.log(img.classList.contains("DJ_Pack"));
+      }
+
+      //-------------------------------------------------------------------------
+
+      
+
+
+
+    </script>
+  </body>
+</html>
