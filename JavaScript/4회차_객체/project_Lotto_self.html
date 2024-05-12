@@ -1,0 +1,70 @@
+<!--2024.05.12-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>로또 번호 추첨</title>
+    <link href="project_Lotto_self.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <style>
+      .flex{
+        display : flex;
+      }
+      *{
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    로또 html / js 2개 준비
+
+    가운데 정렬 
+    2024년 5월 12일 로또 번호 추첨
+    [ 입력칸 ]
+    가운데 버튼 2개 -> 추첨 / 다시
+    1~9 : 노란색
+    10~19 : 하늘색
+    20~29 : 빨간색
+    30번대 보라색
+    40 ~45 : 초록색
+
+    기능
+    날짜가 페이지를 열 때 자동으로 바뀌면서 로딩
+
+    추첨을 누르면 로또 번호가 6개 나타남 / 중복된 숫자 x
+
+    다시 누리면 추첨된 번호 다 없어짐
+
+    다시 버튼을 눌러야만 재추첨 가능 / 추첨된 상태에서 추첨 누르면 다시 추첨 x
+    -->
+
+    <div class = 'container flex'>
+      <div class = 'lotto_title'>
+        <p id = "lotto_date" >날짜</p>
+      </div>
+
+      <div id = 'lotto_num'>
+        <ul class ="flex">
+        </ul>
+      </div>
+
+      <div id = "bt">
+        <button id = start>추첨</button>
+        <button id = retry>다시</button>
+
+      </div>
+    </div>
+    
+    <script src="project_Lotto_self.js">
+    </script>
+  </body>
+</html>
