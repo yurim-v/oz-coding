@@ -1,0 +1,54 @@
+<!--2024.05.12-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>복습</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+    
+    
+    
+    <script>
+      let p = document.createElement('p');
+      document.body.append(p);
+
+      let stop = document.createElement('button');
+      document.body.append(stop);
+      stop.textContent = " 그만 !"
+
+      let timer = setInterval(function(){
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = now.getMonth() + 1;
+        let date = now.getDate();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+        let second = now.getSeconds();
+
+
+        p.textContent = `현재 시간 : ${year}년 ${month}월 ${date}일 / ${hour}시 ${minute}분 ${second}초`
+
+    
+        stop.onclick = function(){  clearInterval(timer); }
+      }, 1000)
+
+
+      //-----------------------------------------------------------------
+
+      console.log(Math.pow(2,4));
+    
+
+      
+
+
+    </script>
+  </body>
+</html>
