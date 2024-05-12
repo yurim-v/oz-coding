@@ -1,0 +1,55 @@
+/* 2024.05.12*/
+*{
+  box-sizing: border-box;
+}
+html{
+  height : 100% ;
+  font-size : 16px ; 
+}
+
+body{
+  margin : 0;
+  height : 100%;
+}
+
+.container{
+  height : 100%;
+  flex-direction : column;
+  justify-content: center;
+  align-items : center;
+}
+
+#lotto_date{
+  font-weight : bold;
+  font-size : 2rem;
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+  border : 1px black solid;
+  width : 18rem;
+  height : 3rem;
+  border-radius : 0.5rem;
+  padding : 0;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+li{
+  border: 1px black solid;
+  width :2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  padding-top : 0.4rem;
+}
+
+button{
+  border : none;
+  width : 4rem;
+  height : 1.7rem;
+  border-radius: 0.3rem;
+  background-color: rgb(255, 204, 0);
+}
