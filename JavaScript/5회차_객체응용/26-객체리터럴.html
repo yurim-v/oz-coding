@@ -1,0 +1,50 @@
+<!--2024.05.13-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>객체 리터럴</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    
+    
+    <script>
+ 
+      const cat = {
+        species : "포유류",
+        charac : "귀여운 동물"
+      }
+      
+      console.log(cat);
+      console.log(cat.name); // 도트 연산자
+      console.log(cat['charac']); // 대괄호 연산자
+
+      console.log(typeof cat); // object : 객체 
+
+
+      //----------------스프레드 연산 ----------------------------
+
+      const yeondoo = {
+        ...cat, // 스프레드 -> 객체 확장( 추후 속성이나, 메소드 추가 )가 가능하다.
+        name : "연두",
+        gender : '공주님',
+        color : "고등어",
+        favorite : ['배 위에서 잠자기', '쳐다보면서 야옹거리기', '닭 안심']
+      }
+
+      console.log(yeondoo);
+
+      console.log(yeondoo.favorite) ;
+      console.log(...yeondoo.favorite); // 대괄호를 제외한 배열 요소만 복사한다.
+
+    </script>
+  </body>
+</html>
