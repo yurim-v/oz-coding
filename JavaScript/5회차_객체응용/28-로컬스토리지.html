@@ -1,0 +1,65 @@
+<!--2024.05.13-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>로컬스토리지</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <p id="item">카리나</p>
+    <button id="set">SET</button>
+    <button id = "get">GET</button>
+    <button id = "remove">REMOVE</button>
+    <button id = "clear">CLEAR</button>
+
+    <script>
+
+    const item = document.getElementById('item');
+
+    const set = document.getElementById('set');
+    
+    set.addEventListener('click', function(){
+      window.localStorage.setItem('Karina',item.textContent)
+    })
+
+    // set애 대하 코드를 없애거나, 브라우저를 새로고침해도 데이터가 사라지지 않는다.
+    
+
+    // key에 해당하는 value 값을 가져온다.
+    const get = document.getElementById('get');
+    get.addEventListener('click', function(){
+      alert(localStorage.getItem('Karina'))
+    })
+
+
+    const remove = document.getElementById('remove');
+    remove.addEventListener('click', function(){
+      localStorage.removeItem('Karina')
+      } )
+    // 데이터 삭제 후 GET 버튼 클릭 시, null 반환
+
+    const clear = document.getElementById('clear');
+    clear.addEventListener('click', function(){
+      localStorage.clear();
+      } )
+
+  
+    localStorage.setItem("커피",{
+      name : "아메리카노"
+    }) // 문자열이 아닌 데이터는 저장되지 않는다. -> 객체 리터럴은 JSON으로 문자열로 변환할 수 있다.
+
+    localStorage.setItem("커피_J",JSON.stringify({
+      name : "아메리카노"
+    }) )
+
+    </script>
+  </body>
+</html>
