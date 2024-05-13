@@ -1,0 +1,62 @@
+<!--2024.05.13-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="KYR">
+    <meta name="description" content="배열 메소드">
+
+    <title>배열 메소드 추가 학습</title>
+    
+    <style>
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id = 'container'></div>
+
+    <script>
+      const container = document.getElementById('container');
+      const crops = ['토마토', '고추', '가지', '고구마', '들깨'];
+
+      let each = crops.forEach(function(value){ // forEach의 () 안에 들어가는 함수 -> 콜백함수
+        return value
+      })
+
+  
+     let result = crops.map(function(value){
+       return  value + '맛있당'
+       // 콜백 함수의 실행 결과인 return 값을 모아서 새로운 배열을 형성
+      })
+
+      console.log(result)
+
+
+      // 배열 요소를 화면에 표시하고, 표시된 값으로 새로운 배열을 형성하도록 코드를 작성해보자.
+
+      let result_2 = crops.map(function(value){
+       let h2 = document.createElement('h2');
+       h2.textContent = `맛 좋은 ${value}`;
+       container.appendChild(h2);
+       return h2
+      })
+
+      console.log(result_2);
+
+      //------------------------------------------------------------------
+
+      let result_3 = crops.filter(function(value){
+        return value.length ==2 // 글자의 길이가 2인 value만 반환
+      })
+
+      console.log(result_3)
+      
+    </script>
+
+  </body>
+</html>
