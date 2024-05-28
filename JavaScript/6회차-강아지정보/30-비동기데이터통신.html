@@ -1,0 +1,52 @@
+<!--2024.05.28-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>비동기 데이터 통신</title>
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+    <button id="push"> PUSH</button>
+    <hr>
+    <img src="", alt="강아지 사진">
+
+    <script>
+
+      //오픈소스 API -> 무료로 오픈되어있는 서버
+      // https://dog.ceo/api/breeds/image/random
+
+
+      // 1. 요청을 어떤 서버에 보내서 서버에서 뭘 할건지 ( 초기화 )
+      const request = new XMLHttpRequest();
+      request.open( "get" , "https://dog.ceo/api/breeds/image/random");
+
+      /* 2-0. 요청을 보내면, 서버로부터 응답이 온다. 
+       -> 응답을 어떻게 프론트에서 처리할 것인지 코드 설계 -> 이벤트 핸들러
+       -> 서버로부터 응답이 정상적으로 왔을 때, 앞단에서 실행할 코드 작성 */
+       request.addEventListener('load', function(){ 
+
+        /* response : 보낸 요청이 잘 처리가 되면, request 객체에는 response라는 key가 업데이트 된다.
+        -> 업데이트된 response 에는 서버로 부터 전달된 응답에 대한 정보가 담겨있다. */
+        
+        console.log(request.response) // 강아지 사진에 대한 소스가 JSON형태로 반환됨 
+
+        console.log(JSON.parse(request.response)); // 객체 형태로 전환 -> 속성으로 응답 data에 접근 가능
+       })
+
+      // 3. 요청을 서버로 전송
+      request.send(); 
+      
+
+
+
+    </script>
+  </body>
+</html>
