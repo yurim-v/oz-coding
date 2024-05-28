@@ -1,4 +1,4 @@
-/* 2024. 05. 15 , 05. 19, 22 */
+/* 2024. 05. 15 , 05. 19, 22, 28 */
 
 // 변수 선언
 let add = document.querySelector('form');
@@ -12,7 +12,7 @@ let i ;
 let todo_data ;
 
 
-// ----------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
 
 add.addEventListener('submit', function(event){
   event.preventDefault();
@@ -40,7 +40,9 @@ add.addEventListener('submit', function(event){
   Remove();
 })
 
-//------------------------------ 할일 말풍선 화면에 생성 + 생성되는 p태그에 timeID 부여
+// -----------------------------------------------------------------------------------
+
+//할일 말풍선 화면에 생성 + 생성되는 p태그에 timeID 부여
 function Create_msg(event){
   div = document.createElement('div')
   p = document.createElement('p')
@@ -94,8 +96,9 @@ function Remove(){
     e.target.parentNode.innerHTML="" // 부모요소 div 선택해서 콘텐츠 코드(button, p 태그)삭제
 
     Data = Data.filter(function(value){
-      if(value.todoId !== e.target.id){
-        return value.todoId !== e.target.id
+
+      if(value.todoId != e.target.id){
+        return value
       }
     })
     Save();
