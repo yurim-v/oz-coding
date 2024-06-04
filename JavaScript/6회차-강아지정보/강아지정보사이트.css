@@ -1,7 +1,11 @@
-/* 2024. 06. 04 */
+/* 2024. 06. 03 / 06.04*/
 
 *{
   box-sizing : border-box;
+
+    /* 스크롤의 움직임을 부드럽게 이동 / 기본 값 : auto */
+  scroll-behavior: smooth;
+
 }
 
 html{
@@ -54,4 +58,36 @@ img{
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 60px;
+}
+
+.more{
+  background-color: rgba(111, 183, 241, 0.688);
+  width : 5rem;
+  height : 5rem;
+  border-radius:2.5rem;
+
+  text-align: center;
+  color : white;
+
+  padding-top : 1.5rem;
+  
+  position:fixed;
+  top : 80%;
+  right : 85%;
+}
+
+.top{
+  background-color: rgba(111, 183, 241, 0.688);
+  width : 5rem;
+  height : 5rem;
+  border-radius:2.5rem;
+
+  text-align: center;
+  color : white;
+
+  padding-top : 1.5rem;
+  
+  position:fixed;
+  top : 80%;
+  left : 85%;
 }
