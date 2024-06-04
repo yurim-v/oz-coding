@@ -35,12 +35,13 @@
 
         position:relative; 
         /* ball때문에 relative로 position 지정 
+
           absolute나 fixed로 위치 지정 시, 문서의 흐름에 제외되면서,
-          absolute는 부묘 요소 또는 조상 요소(position이 없을 경우, 화면)를 기준으로 왼쪽 상단 구석에
-          2개의 eye class의 content가 겹쳐서 위치하게된다. 
-          
-          따라서 문서의 흐름에 포함되는 position은 static(기본)과 relative이나,
-          static에는 absolute가 적용되지 않기에 relative로 지정한다.*/
+          absolute는 위치가 지정된 부모 요소 또는 조상 요소의 위치를 기준으로 이동한다.
+
+          그러나, position : static 은 기본 값으로 위치가 지정되지 않은 것과 동일함
+								따라서, static이 아닌 위치가 지정되어있어야 하나, relative만 문서의 흐름에 포함 -> 부모요소 position을 relative로 지정함 
+						*/
       }
 
       .ball{
