@@ -101,7 +101,7 @@ button.addEventListener('click', function(){
     문자열의 indexOf(value) : 문자열 중 value를 포함하고 있는 첫번째 위치를 index 번호로 반환
       ex )
         let a = "가나다라마다바사" -> a.indexOf('다) : 2  
-    indexOf 공통 특징 : 공백에 대해서 포함 여부를 확이할 떄에는 무조건 0 반환
+    indexOf 공통 특징 : 공백에 대해서 포함 여부를 확인할 때에는 무조건 0 반환
     -> 아무것도 입력하지 않고 필터링 버튼 클릭 시, 모든 요소가 0이 반환되면서 페이지가 필터링 전으로 돌아감    */
   })
 
