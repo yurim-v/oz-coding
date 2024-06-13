@@ -65,12 +65,11 @@ img{
   width : 5rem;
   height : 5rem;
   border-radius:2.5rem;
+  padding-top : 1.5rem;
 
   text-align: center;
   color : white;
 
-  padding-top : 1.5rem;
-  
   position:fixed;
   top : 80%;
   right : 85%;
